@@ -5,4 +5,6 @@ permalink: /contact/
 ---
 # Contact
 
-For correspondence: **email@example.com**
+For correspondence.
+
+Email: ckotsidimos@gmail.com
