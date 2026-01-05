@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career | Christos Kotsidimos</title>
+    <meta name="description" content="Professional trajectory and career schema of Christos Kotsidimos, Group CTO and Strategic Advisor.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .kinetic-border {
+            border-left: 2px solid #3b82f6;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+        }
+
+        .json-viewer {
+            background: #020617;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .status-pill {
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .nav-link:hover {
+            color: #3b82f6;
+            transform: translateX(4px);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -9px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            background: #3b82f6;
+            border: 4px solid #0f172a;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <nav class="fixed w-full z-50 bg-slate-950/80 backdrop-blur-md border-bottom border-slate-800 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="/index.html" class="text-xl font-800 tracking-tighter uppercase">Christos Kotsidimos<span class="text-blue-500">.</span></a>
+            <div class="flex items-center space-x-6">
+                <button onclick="toggleView()" class="text-sm font-bold bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition" id="viewToggle">
+                    Switch to JSON Schema
+                </button>
+                <a href="https://github.com/ckotsidimos" target="_blank" class="text-xl hover:text-blue-500 transition"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 pt-32 pb-20">
+        <!-- Render View -->
+        <div id="humanView" class="max-w-4xl mx-auto">
+            <header class="mb-16">
+                <h1 class="text-5xl font-800 mb-4 tracking-tight">Career <span class="text-blue-500">Schema</span></h1>
+                <p class="text-xl text-slate-400 leading-relaxed max-w-2xl" id="summary"></p>
+                <div class="flex flex-wrap gap-3 mt-6" id="basics-contact"></div>
+            </header>
+
+            <section class="mb-20">
+                <h2 class="text-sm font-bold uppercase tracking-widest text-blue-500 mb-10">Engineering Execution & Experience</h2>
+                <div class="relative border-l border-slate-800 ml-4 space-y-12" id="workExperience">
+                    <!-- Work injected here -->
+                </div>
+            </section>
+
+            <section class="grid md:grid-cols-2 gap-12 mb-20">
+                <div>
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-blue-500 mb-6">Strategic Vectors (Skills)</h2>
+                    <div class="space-y-6" id="skillsGrid"></div>
+                </div>
+                <div>
+                    <h2 class="text-sm font-bold uppercase tracking-widest text-blue-500 mb-6">Foundations & Credentials</h2>
+                    <div class="space-y-4" id="educationCerts"></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- JSON View (Hidden by default) -->
+        <div id="jsonView" class="hidden max-w-5xl mx-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold italic text-slate-500">// raw_schema_data.json</h2>
+                <button onclick="copyJson()" class="text-xs font-bold uppercase tracking-widest hover:text-blue-400">Copy to Clipboard</button>
+            </div>
+            <pre class="json-viewer p-8 rounded-lg border border-slate-800 text-blue-300 overflow-x-auto text-sm leading-relaxed"></pre>
+        </div>
+    </main>
+
+    <script>
+        const cvData = {
+          "basics": {
+            "name": "Christos Kotsidimos",
+            "label": "Group CTO | The Kinetic Leader",
+            "email": "ckotsidimos@gmail.com",
+            "phone": "***********",
+            "url": "https://kotsidimos.com",
+            "summary": "Commercial-first technology executive bridging the gap between Boardroom Strategy and Engineering Execution. Architecting kinetic organizations for global enterprise scale where speed, regulation, and cost pressure intersect. Expert in M&A technology integration, SaaS transformation, and Private Equity value creation.",
+            "location": { "city": "London", "countryCode": "GB" }
+          },
+          "work": [
+            {
+              "name": "Eviden",
+              "position": "Head of CTO Strategy",
+              "startDate": "2021-01-01",
+              "summary": "Leading strategic roadmap definition and architectural governance for Tier-1 Financial Services and Global Enterprises.",
+              "highlights": [
+                "Architected the Secure Container Strategy for UBS, establishing core governance for multi-cloud adoption.",
+                "Realized £5M in annual operational savings for Unilever through infrastructure optimization.",
+                "Deployed 'The Kinetic Methodology' to reduce technical debt and increase pivot velocity."
+              ]
+            },
+            {
+              "name": "Cloudreach (Acquired by Eviden)",
+              "position": "Chief Architect",
+              "startDate": "2018-01-01",
+              "endDate": "2021-12-31",
+              "summary": "Directed a global team of 90+ Architects during rapid growth and successful acquisition phases.",
+              "highlights": [
+                "Standardized core portfolios for acquisition readiness.",
+                "Designed Azure Landing Zone for IKEA, cutting global infrastructure costs by 30%.",
+                "Pioneered FinOps principles to ensure 100% ROI on cloud investments."
+              ]
+            },
+            {
+              "name": "InternetQ PLC",
+              "position": "IT Manager",
+              "startDate": "2011-01-01",
+              "endDate": "2018-12-31",
+              "highlights": [
+                "Migrated 1.5K servers to Azure, securing 40% of company revenue through modern architecture.",
+                "Achieved 30% reduction in OpEx through global data center consolidation."
+              ]
+            }
+          ],
+          "skills": [
+            { "name": "Boardroom Strategy", "keywords": ["M&A Integration", "PE Value Creation", "EBITDA Growth"] },
+            { "name": "Engineering Execution", "keywords": ["Platform Engineering", "Cloud-Native", "AI/ML Roadmap"] },
+            { "name": "The Kinetic Doctrine", "keywords": ["Organizational Physics", "Decision Latency Reduction", "Mosaic Design"] }
+          ],
+          "education": [
+            { "institution": "City University of Seattle", "area": "Computer Systems", "studyType": "Master of Science" },
+            { "institution": "University of Northumbria", "area": "Business Systems and IT", "studyType": "Bachelor of Science" }
+          ],
+          "certificates": [
+            { "name": "Azure Solutions Architect Expert" },
+            { "name": "MCSE: Cloud Platform and Infrastructure" },
+            { "name": "MCSA: Cloud Platform" }
+          ]
+        };
+
+        function renderResume() {
+            // Summary
+            document.getElementById('summary').innerText = cvData.basics.summary;
+
+            // Contact
+            const contact = document.getElementById('basics-contact');
+            contact.innerHTML = `
+                <span class="status-pill px-3 py-1 text-xs font-bold rounded-full">${cvData.basics.location.city}, UK</span>
+                <span class="status-pill px-3 py-1 text-xs font-bold rounded-full">${cvData.basics.email}</span>
+                <span class="status-pill px-3 py-1 text-xs font-bold rounded-full">${cvData.basics.phone}</span>
+            `;
+
+            // Experience
+            const workContainer = document.getElementById('workExperience');
+            cvData.work.forEach(job => {
+                const jobDiv = document.createElement('div');
+                jobDiv.className = 'relative pl-8';
+                jobDiv.innerHTML = `
+                    <div class="timeline-dot"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">${job.position}</h3>
+                            <p class="text-blue-400 font-semibold">${job.name}</p>
+                        </div>
+                        <span class="text-sm text-slate-500 font-mono mt-1 md:mt-0">${job.startDate.split('-')[0]} — ${job.endDate ? job.endDate.split('-')[0] : 'Present'}</span>
+                    </div>
+                    <p class="text-slate-400 mb-4 text-sm">${job.summary || ''}</p>
+                    <ul class="space-y-2">
+                        ${job.highlights.map(h => `<li class="text-slate-500 text-sm flex items-start"><span class="text-blue-500 mr-2">▹</span>${h}</li>`).join('')}
+                    </ul>
+                `;
+                workContainer.appendChild(jobDiv);
+            });
+
+            // Skills
+            const skillsContainer = document.getElementById('skillsGrid');
+            cvData.skills.forEach(skill => {
+                const skillDiv = document.createElement('div');
+                skillDiv.className = 'glass-panel p-6 rounded-lg';
+                skillDiv.innerHTML = `
+                    <h4 class="font-bold text-white mb-3">${skill.name}</h4>
+                    <div class="flex flex-wrap gap-2">
+                        ${skill.keywords.map(k => `<span class="text-[10px] uppercase tracking-wider font-800 text-slate-400 border border-slate-800 px-2 py-1">${k}</span>`).join('')}
+                    </div>
+                `;
+                skillsContainer.appendChild(skillDiv);
+            });
+
+            // Education & Certs
+            const eduContainer = document.getElementById('educationCerts');
+            
+            // Render Education
+            cvData.education.forEach(edu => {
+                const eduDiv = document.createElement('div');
+                eduDiv.className = 'glass-panel p-4 rounded-lg border-l-2 border-slate-700 hover:border-blue-500 transition-colors';
+                eduDiv.innerHTML = `
+                    <p class="text-xs font-bold text-blue-500 uppercase tracking-wider mb-1">${edu.studyType}</p>
+                    <h4 class="font-bold text-white">${edu.area}</h4>
+                    <p class="text-slate-500 text-xs">${edu.institution}</p>
+                `;
+                eduContainer.appendChild(eduDiv);
+            });
+
+            // Render Certs header
+            if (cvData.certificates && cvData.certificates.length > 0) {
+                const certHeader = document.createElement('h3');
+                certHeader.className = 'text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mt-8 mb-4';
+                certHeader.innerText = 'Technical Certifications';
+                eduContainer.appendChild(certHeader);
+
+                // Render Certs
+                cvData.certificates.forEach(cert => {
+                    const certDiv = document.createElement('div');
+                    certDiv.className = 'flex items-center space-x-3 text-slate-400 text-sm mb-3';
+                    certDiv.innerHTML = `<i class="fas fa-certificate text-blue-900 text-xs"></i> <span>${cert.name}</span>`;
+                    eduContainer.appendChild(certDiv);
+                });
+            }
+
+            // Raw JSON View
+            document.querySelector('.json-viewer').textContent = JSON.stringify(cvData, null, 2);
+        }
+
+        let isJsonView = false;
+        function toggleView() {
+            isJsonView = !isJsonView;
+            document.getElementById('humanView').classList.toggle('hidden');
+            document.getElementById('jsonView').classList.toggle('hidden');
+            document.getElementById('viewToggle').innerText = isJsonView ? 'Switch to Profile View' : 'Switch to JSON Schema';
+        }
+
+        function copyJson() {
+            const text = JSON.stringify(cvData, null, 2);
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        }
+
+        window.onload = renderResume;
+    </script>
+</body>
+</html>

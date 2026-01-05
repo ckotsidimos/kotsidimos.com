@@ -1,0 +1,141 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "selected": {
+    "template": "kinetic-executive",
+    "theme": "dark"
+  },
+  "basics": {
+    "name": "Christos Kotsidimos",
+    "label": "Group CTO | The Platform CTO",
+    "image": "https://kotsidimos.com/assets/avatar.png",
+    "email": "ckotsidimos@gmail.com",
+    "phone": "+44 7783 224147",
+    "url": "https://kotsidimos.com",
+    "summary": "Commercial-first technology executive bridging the gap between Boardroom Strategy and Engineering Execution. Architecting kinetic organizations for global enterprise scale where speed, regulation, and cost pressure intersect. Expert in M&A technology integration, SaaS transformation, and Private Equity value creation.",
+    "location": {
+      "city": "London",
+      "countryCode": "GB"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "ckotsidimos",
+        "url": "https://www.linkedin.com/in/ckotsidimos"
+      },
+      {
+        "network": "GitHub",
+        "username": "ckotsidimos",
+        "url": "https://github.com/ckotsidimos"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Eviden",
+      "position": "Head of CTO Strategy",
+      "url": "https://eviden.com",
+      "startDate": "2021-01-01",
+      "summary": "Leading strategic roadmap definition and architectural governance for Tier-1 Financial Services and Global Enterprises.",
+      "highlights": [
+        "Architected the Secure Container Strategy for UBS, establishing the core governance model for strategic multi-cloud adoption in a Tier-1 regulated environment.",
+        "Engineered a cloud transformation strategy for Unilever that realized £5M in annual operational savings through infrastructure optimization.",
+        "Translated architectural vision into commercial pre-sales opportunities, directly contributing to organizational revenue targets.",
+        "Deployed adaptive architecture frameworks (The Kinetic Methodology) to reduce technical debt and increase strategic pivot velocity."
+      ]
+    },
+    {
+      "name": "Cloudreach (Acquired by Eviden)",
+      "position": "Chief Architect",
+      "startDate": "2018-01-01",
+      "endDate": "2021-12-31",
+      "summary": "Directed a global team of 90+ Strategy Leads and Architects during rapid growth and successful acquisition phases.",
+      "highlights": [
+        "Standardized core product portfolios and delivery processes to drive the operational efficiency required for acquisition readiness.",
+        "Designed the Azure Landing Zone program for IKEA, resulting in a 30% reduction in global infrastructure costs.",
+        "Pioneered FinOps principles within transformation portfolios to ensure 100% ROI on cloud investments."
+      ]
+    },
+    {
+      "name": "InternetQ PLC",
+      "position": "IT Manager",
+      "startDate": "2011-01-01",
+      "endDate": "2018-12-31",
+      "summary": "Led the transition from legacy infrastructure to modern digital architecture for a global SaaS provider.",
+      "highlights": [
+        "Migrated 1.5K servers and 50 mission-critical applications to Azure, securing 40% of company revenue through modern scalable architecture.",
+        "Achieved a 30% reduction in OpEx through global data center consolidation and the implementation of Agile methodologies."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "City University of Seattle",
+      "area": "Computer Systems",
+      "studyType": "Master of Science"
+    },
+    {
+      "institution": "University of Northumbria",
+      "area": "Business Systems and IT",
+      "studyType": "Bachelor of Science"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Microsoft Certified: Azure Solutions Architect Expert"
+    },
+    {
+      "name": "MCSE: Cloud Platform and Infrastructure"
+    },
+    {
+      "name": "MCSA: Cloud Platform"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Boardroom Strategy",
+      "level": "Master",
+      "keywords": [
+        "M&A Technology Integration",
+        "PE Value Creation",
+        "Investor Relations",
+        "EBITDA Growth Strategy"
+      ]
+    },
+    {
+      "name": "Engineering Execution",
+      "level": "Master",
+      "keywords": [
+        "Platform Engineering",
+        "Cloud-Native Architecture",
+        "AI/ML Roadmap Development",
+        "Distributed Team Leadership"
+      ]
+    },
+    {
+      "name": "The Kinetic Doctrine",
+      "level": "Master",
+      "keywords": [
+        "Organizational Physics",
+        "Decision Latency Reduction",
+        "Structural Mosaic Design",
+        "Adaptive Infrastructure"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "The Kinetic Enterprise",
+      "description": "A proprietary framework for building organizations designed to be perpetually adaptive to market shifts and M&A activity.",
+      "url": "https://github.com/ckotsidimos/kinetic-enterprise",
+      "highlights": [
+        "Focuses on decoupling business capabilities from underlying technology.",
+        "Enables rapid integration of new acquisitions and immediate scalability."
+      ]
+    }
+  ],
+  "meta": {
+    "canonical": "https://kotsidimos.com/cv.json",
+    "version": "1.2.0",
+    "lastModified": "2026-01-05T16:30:00Z"
+  }
+}
