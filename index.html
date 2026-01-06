@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christos Kotsidimos | The Kinetic Leader</title>
+    <title>Christos Kotsidimos | The Platform CTO</title>
     
     <!-- SEO & Open Graph for LinkedIn Optimization -->
     <meta name="description" content="Group CTO and Strategic Advisor specializing in Organizational Physics, Decision Latency, and the Kinetic Enterprise doctrine.">
-    <meta property="og:title" content="Christos Kotsidimos | The Kinetic Leader">
+    <meta property="og:title" content="Christos Kotsidimos | The Platform CTO">
     <meta property="og:description" content="Architecting Kinetic Organizations: Bridging the gap between Boardroom Strategy and Engineering Execution.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kotsidimos.com">
@@ -87,6 +87,14 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* New Factory Section Styles */
+        .factory-contrast {
+            border-left: 2px solid #ef4444; /* Red for the 'Old Way' */
+        }
+        .kinetic-contrast {
+            border-left: 2px solid #3b82f6; /* Blue for the 'New Way' */
+        }
     </style>
     <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
@@ -98,12 +106,12 @@
 
     <nav class="glass-nav fixed w-full z-50 py-4">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="text-xl font-800 tracking-tighter uppercase">Christos Kotsidimos<span class="text-blue-500"></span></div>
+            <div class="text-xl font-800 tracking-tighter uppercase">Christos Kotsidimos<span class="text-blue-500">.</span></div>
             <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-400">
                 <a href="#doctrine" class="hover:text-white transition">Doctrine</a>
+                <a href="#factory" class="hover:text-white transition">The Reset</a>
                 <a href="#mosaic" class="hover:text-white transition">The Mosaic</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
-                <a href="/pages/career.html" class="hover:text-white transition">Career</a>
+                <a href="/pages/career.html" class="hover:text-white transition">My Career</a>
             </div>
             <a href="https://github.com/ckotsidimos/kinetic-enterprise" target="_blank" class="text-xl hover:text-blue-500 transition" title="GitHub Doctrine">
                 <i class="fab fa-github"></i>
@@ -123,7 +131,9 @@
                 </p>
                 <div class="flex space-x-4">
                     <a href="#doctrine" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-sm font-bold transition">Explore the Doctrine</a>
-                    <a href="#contact" class="border border-slate-700 hover:border-blue-500 px-8 py-4 rounded-sm font-bold transition">Get in Touch</a>
+                    <a href="https://github.com/ckotsidimos/kinetic-enterprise/raw/main/assets/The_Kinetic_Imperative.pdf" class="border border-slate-700 hover:border-blue-500 px-8 py-4 rounded-sm font-bold transition flex items-center gap-2">
+                        <i class="fas fa-file-pdf"></i> The Kinetic Imperative
+                    </a>
                 </div>
             </div>
             <div class="hidden md:block reveal" style="transition-delay: 0.2s;">
@@ -176,6 +186,47 @@
         </div>
     </section>
 
+    <!-- New Section: The Factory vs. The Kinetic Enterprise -->
+    <section id="factory" class="py-24 bg-slate-900 border-y border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center reveal">
+                <div>
+                    <h3 class="text-xs font-bold text-red-500 uppercase tracking-widest mb-2">The 40-Year Mistake</h3>
+                    <h2 class="text-3xl font-bold mb-6">Using 2026 Tech to Power 1913 Processes</h2>
+                    <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                        We spent billions importing high-end technology into the "factory," but we never bothered to rethink the factory itself. We treated Cloud and AI as "tool improvements"—faster typewriters—rather than the structural revolution they were meant to be.
+                    </p>
+                    <p class="text-slate-400 text-lg leading-relaxed">
+                        We enabled the "Assembly Line" to run faster, but it’s still an assembly line designed for the steam engine era. We are just automating our own friction.
+                    </p>
+                </div>
+                <div class="bg-slate-950 p-8 rounded-lg border border-slate-800 shadow-2xl">
+                    <div class="flex items-start mb-6 pb-6 border-b border-slate-800">
+                        <div class="w-12 h-12 flex-shrink-0 bg-red-900/20 text-red-500 flex items-center justify-center rounded border border-red-900/50 mr-4">
+                            <i class="fas fa-industry text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1">The Industrial Model</h4>
+                            <p class="text-sm text-slate-500">Standardizing <strong class="text-slate-300">Behavior</strong> to reduce variance.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mb-6">
+                        <i class="fas fa-arrow-down text-blue-500 animate-bounce"></i>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 flex-shrink-0 bg-blue-900/20 text-blue-500 flex items-center justify-center rounded border border-blue-900/50 mr-4">
+                            <i class="fas fa-network-wired text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1">The Kinetic Reset</h4>
+                            <p class="text-sm text-slate-500">Standardizing <strong class="text-white">Interfaces</strong> to enable motion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="mosaic" class="py-24 kinetic-gradient">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16 reveal">
@@ -213,7 +264,7 @@
                 <a href="https://github.com/ckotsidimos" target="_blank" class="text-3xl hover:text-blue-500 transition" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="mailto:ckotsidimos@gmail.com" class="text-3xl hover:text-blue-500 transition" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
-            <p class="text-slate-600 text-sm">&copy; 2024 Christos Kotsidimos. The Platform CTO & Kinetic Enterprise are trademarks of architectural intent.</p>
+            <p class="text-slate-600 text-sm">&copy; 2026 Christos Kotsidimos. The Platform CTO & Kinetic Enterprise are trademarks of architectural intent.</p>
         </div>
     </footer>
 
@@ -229,6 +280,16 @@
         }, observerOptions);
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
