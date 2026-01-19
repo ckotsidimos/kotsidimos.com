@@ -6,46 +6,120 @@
   <title>About — Christos Kotsidimos</title>
   <meta name="description" content="Orientation and background." />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-    html { font-family: 'Inter', system-ui, sans-serif; }
-  </style>
+    <meta name="description" content="Technology leadership, systems architecture, and authorship." />
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg: '#0b1220',
-            fg: '#e6e9ef',
-            muted: '#9aa4b2',
-            accent: '#7aa2ff',
-            rule: '#1f2a44'
-          },
-          maxWidth: { reading: '70ch' }
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            scroll-behavior: smooth;
         }
-      }
-    }
-  </script>
+
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        .mosaic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .mosaic-tile {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mosaic-tile:hover {
+            border-color: #3b82f6;
+            transform: translateY(-5px);
+            background: rgba(30, 41, 59, 0.8);
+        }
+
+        .mosaic-tile::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #3b82f6;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .mosaic-tile:hover::before {
+            opacity: 1;
+        }
+
+        .hero-text {
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .factory-contrast {
+            border-left: 2px solid #ef4444;
+        }
+        .kinetic-contrast {
+            border-left: 2px solid #3b82f6;
+        }
+    </style>
+
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
 </head>
 
 <body class="bg-bg text-fg antialiased">
+<nav class="glass-nav fixed w-full z-50 py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <div class="text-xl font-800 tracking-tighter uppercase">
+            Christos Kotsidimos<span class="text-blue-500"></span>
+        </div>
 
-<header class="border-b border-rule">
-  <div class="max-w-reading mx-auto px-5 py-6 flex justify-between items-center">
-    <div class="text-xs font-semibold tracking-widest uppercase">Christos Kotsidimos</div>
-    <nav class="text-sm text-muted space-x-6">
-      <a href="/" class="hover:text-fg">Home</a>
-      <a href="/pages/about.html" class="hover:text-fg">About</a>
-      <a href="/pages/work.html" class="hover:text-fg">Work</a>
-      <a href="/pages/cv.html" class="hover:text-fg">CV</a>
-      <a href="/pages/contact.html" class="hover:text-fg">Contact</a>
-    </nav>
-  </div>
-</header>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-400">
+            <a href="/index.html" class="hover:text-slate-200">Home</a>
+            <a href="/pages/about.html" class="hover:text-white transition">About</a>
+            <a href="/pages/work.html" class="hover:text-white transition">Work</a>
+            <a href="/pages/cv.html" class="hover:text-white transition">CV</a>
+            <a href="/pages/contact.html" class="hover:text-white transition">Contact</a>
+        </div>
+
+        <a href="https://github.com/ckotsidimos/kinetic-enterprise" target="_blank"
+           class="text-xl hover:text-blue-500 transition">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+</nav>
 
 <main>
 
