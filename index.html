@@ -81,6 +81,13 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .factory-contrast {
+            border-left: 2px solid #ef4444;
+        }
+        .kinetic-contrast {
+            border-left: 2px solid #3b82f6;
+        }
     </style>
 
     <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
@@ -134,10 +141,123 @@
                 executable structure rather than managerial process.
             </p>
         </div>
+
+        <div class="hidden md:block reveal" style="transition-delay: 0.2s;">
+            <div class="relative">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg blur opacity-25"></div>
+                <div class="relative bg-slate-900 p-8 border border-slate-800 rounded-lg">
+                    <code class="text-blue-400 text-sm">
+                        <span class="text-slate-500">// System behavior</span><br>
+                        const enterprise = {<br>
+                        &nbsp;&nbsp;structure: <span class="text-amber-400">'distributed'</span>,<br>
+                        &nbsp;&nbsp;constraint: <span class="text-amber-400">'decision_latency'</span>,<br>
+                        &nbsp;&nbsp;governance: <span class="text-amber-400">'executable'</span><br>
+                        };
+                    </code>
+                </div>
+            </div>
+        </div>
     </div>
 </header>
 
-<!-- rest of the page remains unchanged -->
+<section id="orientation" class="py-24 bg-slate-950">
+    <div class="container mx-auto px-6">
+        <div class="max-w-3xl mb-16 reveal">
+            <h3 class="text-3xl font-bold mb-6">Systems Orientation</h3>
+            <p class="text-slate-400 text-lg leading-relaxed">
+                Modern enterprises behave as complex systems. Outcomes emerge from
+                structure, interfaces, and feedback loops rather than individual
+                intent. When organizational mass exceeds decision velocity,
+                execution degrades regardless of technical capability.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 reveal">
+            <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
+                <h4 class="text-xl font-bold mb-4">Decision Latency</h4>
+                <p class="text-slate-500 text-sm">
+                    The elapsed time between intent and coordinated action across
+                    a distributed organization.
+                </p>
+            </div>
+            <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
+                <h4 class="text-xl font-bold mb-4">Structural Coherence</h4>
+                <p class="text-slate-500 text-sm">
+                    The ability of the system to absorb change without
+                    fragmentation or instability.
+                </p>
+            </div>
+            <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
+                <h4 class="text-xl font-bold mb-4">Governance as Constraint</h4>
+                <p class="text-slate-500 text-sm">
+                    Governance encoded as executable boundaries rather than
+                    approval chains.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="industrial" class="py-24 bg-slate-900 border-y border-slate-800">
+    <div class="container mx-auto px-6 reveal">
+        <h2 class="text-3xl font-bold mb-6">The Industrial Limit</h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-6">
+            Industrial operating models remain effective within environments
+            defined by predictability. When applied beyond that domain, they
+            increase throughput while preserving structural friction.
+        </p>
+        <p class="text-slate-400 text-lg leading-relaxed">
+            Modern technology accelerates execution, but does not resolve
+            decision bottlenecks created by outdated control assumptions.
+        </p>
+    </div>
+</section>
+
+<section id="model" class="py-24 kinetic-gradient">
+    <div class="container mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+            <h2 class="text-4xl font-bold mb-6">Structural Model</h2>
+            <p class="text-slate-400">
+                I treat the enterprise as a recomposable system of interoperating
+                capabilities rather than a collection of isolated functions.
+            </p>
+        </div>
+
+        <div class="mosaic-grid reveal">
+            <div class="mosaic-tile">
+                <h4 class="text-xl font-bold mb-3">AI as Capability</h4>
+                <p class="text-slate-500 text-sm">
+                    Embedded into existing decision and execution paths rather
+                    than separated into standalone initiatives.
+                </p>
+            </div>
+            <div class="mosaic-tile">
+                <h4 class="text-xl font-bold mb-3">Data as Flow</h4>
+                <p class="text-slate-500 text-sm">
+                    Treated as a continuous input to system behavior rather than
+                    a static asset.
+                </p>
+            </div>
+            <div class="mosaic-tile">
+                <h4 class="text-xl font-bold mb-3">Security as Boundary</h4>
+                <p class="text-slate-500 text-sm">
+                    Constraints that enable higher operating tempo by reducing
+                    systemic risk.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-16 bg-slate-950 border-t border-slate-900">
+    <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
+        <p>
+            Author of <strong class="text-slate-300">THE KINETIC ENTERPRISE</strong>,
+            a doctrinal account of organizational behavior under sustained speed
+            and complexity.
+        </p>
+    </div>
+</footer>
 
 <script>
     const observer = new IntersectionObserver(entries => {
