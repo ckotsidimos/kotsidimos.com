@@ -1,99 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Christos Kotsidimos</title>
-  <meta name="description" content="Authorship and provenance." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christos Kotsidimos</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="Technology leadership, systems architecture, and authorship." />
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-    html { font-family: 'Inter', system-ui, sans-serif; }
-  </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg: '#0b1220',
-            fg: '#e6e9ef',
-            muted: '#9aa4b2',
-            accent: '#7aa2ff',
-            rule: '#1f2a44'
-          },
-          maxWidth: { reading: '70ch' }
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            scroll-behavior: smooth;
         }
-      }
-    }
-  </script>
-      <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        .mosaic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .mosaic-tile {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mosaic-tile:hover {
+            border-color: #3b82f6;
+            transform: translateY(-5px);
+            background: rgba(30, 41, 59, 0.8);
+        }
+
+        .mosaic-tile::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #3b82f6;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .mosaic-tile:hover::before {
+            opacity: 1;
+        }
+
+        .hero-text {
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .factory-contrast {
+            border-left: 2px solid #ef4444;
+        }
+        .kinetic-contrast {
+            border-left: 2px solid #3b82f6;
+        }
+    </style>
+
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <link rel="shortcut icon" href="/assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
     <link rel="manifest" href="/assets/site.webmanifest" />
 </head>
-<body class="bg-bg text-fg antialiased">
-<header class="border-b border-rule">
-  <div class="max-w-reading mx-auto px-5 py-6 flex justify-between items-center">
-    <div class="text-xs font-semibold tracking-widest uppercase">Christos Kotsidimos</div>
-    <nav class="text-sm text-muted space-x-6">
-      <a href="/" class="hover:text-fg">Home</a>
-      <a href="/pages/about.html" class="hover:text-fg">About</a>
-      <a href="/pages/work.html" class="hover:text-fg">Work</a>
-      <a href="/pages/cv.html" class="hover:text-fg">CV</a>
-      <a href="/pages/contact.html" class="hover:text-fg">Contact</a>
-    </nav>
-  </div>
-</header>
-<main class="max-w-reading mx-auto px-5 py-20">
 
-<h1 class="text-3xl md:text-4xl font-light leading-tight mb-10">
-  Christos Kotsidimos
-</h1>
+<body>
 
-<p class="text-muted text-lg mb-12">
-  Author of <span class="text-fg">THE KINETIC ENTERPRISE</span>, a doctrine on how
-  organizations operate, decide, and remain coherent under sustained speed and complexity.
-</p>
-
-<hr class="border-rule mb-12">
-
-<h2 class="text-xs uppercase tracking-widest text-muted mb-4">Focus</h2>
-<ul class="list-disc pl-5 space-y-2 mb-12">
-  <li>Decision structures under uncertainty</li>
-  <li>Operating models at scale</li>
-  <li>Governance as executable constraint</li>
-  <li>Flow across distributed, regulated systems</li>
-</ul>
-
-<hr class="border-rule mb-12">
-
-<h2 class="text-xs uppercase tracking-widest text-muted mb-4">Canonical Work</h2>
-<p class="mb-4">
-  <strong>The Kinetic Enterprise — A CTO Doctrine for the Cognitive Economy</strong><br>
-  A structural account of why modern organizations freeze under speed, and how
-  operating systems can convert insight into coordinated action without destabilizing the system.
-</p>
-<p>
-  Canonical home:
-  <a href="https://www.kineticorganization.com" class="text-accent hover:underline">
-    kineticorganization.com
-  </a>
-</p>
-
-</main>
-<footer class="border-t border-rule">
-  <div class="max-w-reading mx-auto px-5 py-8 text-sm text-muted">
-    <div>© Christos Kotsidimos</div>
-    <div class="flex gap-4 mt-3">
-      <a href="https://github.com/ckotsidimos" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/ckotsidimos/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+<nav class="glass-nav fixed w-full z-50 py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <div class="text-xl font-800 tracking-tighter uppercase">
+            Christos Kotsidimos<span class="text-blue-500">.</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-400">
+            <a href="#orientation" class="hover:text-white transition">Orientation</a>
+            <a href="#industrial" class="hover:text-white transition">Industrial Limit</a>
+            <a href="#model" class="hover:text-white transition">Structural Model</a>
+            <a href="/pages/career.html" class="hover:text-white transition">Career</a>
+        </div>
+        <a href="https://github.com/ckotsidimos/kinetic-enterprise" target="_blank"
+           class="text-xl hover:text-blue-500 transition">
+            <i class="fab fa-github"></i>
+        </a>
     </div>
-  </div>
+</nav>
+
+<header class="min-h-screen flex items-center pt-20 kinetic-gradient">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+            <h2 class="text-slate-400 font-semibold tracking-widest uppercase text-sm mb-4">
+                Technology leadership & systems architecture
+            </h2>
+
+            <h1 class="text-5xl md:text-7xl font-800 hero-text mb-6">
+                Christos Kotsidimos
+            </h1>
+
+            <p class="text-xl text-slate-400 mb-8 max-w-lg leading-relaxed">
+                I work on large, distributed socio-technical systems where scale,
+                regulation, and sustained change place structural limits on how
+                organizations decide and execute.
+            </p>
+
+            <p class="text-slate-400 max-w-lg leading-relaxed">
+                My focus is on decision latency, coordination, and governance as
+                executable structure rather than managerial process.
+            </p>
+        </div>
+
+        <div class="hidden md:block reveal" style="transition-delay: 0.2s;">
+            <div class="relative">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg blur opacity-25"></div>
+                <div class="relative bg-slate-900 p-8 border border-slate-800 rounded-lg">
+                    <code class="text-blue-400 text-sm">
+                        <span class="text-slate-500">// System behavior</span><br>
+                        const enterprise = {<br>
+                        &nbsp;&nbsp;structure: <span class="text-amber-400">'distributed'</span>,<br>
+                        &nbsp;&nbsp;constraint: <span class="text-amber-400">'decision_latency'</span>,<br>
+                        &nbsp;&nbsp;governance: <span class="text-amber-400">'executable'</span><br>
+                        };
+                    </code>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="orientation" class="py-24 bg-slate-950">
+    <div class="container mx-auto px-6">
+        <div class="max-w-3xl mb-16 reveal">
+            <h3 class="text-3xl font-bold mb-6">Systems Orientation</h3>
+            <p class="text-slate-400 text-lg leading-relaxed">
+                Modern enterprises behave as complex systems. Outcomes emerge from
+                structure, interfaces, and feedback loops rather than individual
+                intent. When organizational mass exceeds decision velocity,
+                execution degrades regardless of technical capability.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 reveal">
+            <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
+                <h4 class="text-xl font-bold mb-4">Decision Latency</h4>
+                <p class="text-slate-500 text-sm">
+                    The elapsed time between intent and coordinated action across
+                    a distributed organization.
+                </p>
+            </div>
+            <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
+                <h4 class="text-xl font-bold mb-4">Structural Coherence</h4>
+                <p class="text-slate-500 text-sm">
+                    The ability of the system to absorb change without
+                    fragmentation or instability.
+                </p>
+            </div>
+            <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
+                <h4 class="text-xl font-bold mb-4">Governance as Constraint</h4>
+                <p class="text-slate-500 text-sm">
+                    Governance encoded as executable boundaries rather than
+                    approval chains.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="industrial" class="py-24 bg-slate-900 border-y border-slate-800">
+    <div class="container mx-auto px-6 reveal">
+        <h2 class="text-3xl font-bold mb-6">The Industrial Limit</h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-6">
+            Industrial operating models remain effective within environments
+            defined by predictability. When applied beyond that domain, they
+            increase throughput while preserving structural friction.
+        </p>
+        <p class="text-slate-400 text-lg leading-relaxed">
+            Modern technology accelerates execution, but does not resolve
+            decision bottlenecks created by outdated control assumptions.
+        </p>
+    </div>
+</section>
+
+<section id="model" class="py-24 kinetic-gradient">
+    <div class="container mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+            <h2 class="text-4xl font-bold mb-6">Structural Model</h2>
+            <p class="text-slate-400">
+                I treat the enterprise as a recomposable system of interoperating
+                capabilities rather than a collection of isolated functions.
+            </p>
+        </div>
+
+        <div class="mosaic-grid reveal">
+            <div class="mosaic-tile">
+                <h4 class="text-xl font-bold mb-3">AI as Capability</h4>
+                <p class="text-slate-500 text-sm">
+                    Embedded into existing decision and execution paths rather
+                    than separated into standalone initiatives.
+                </p>
+            </div>
+            <div class="mosaic-tile">
+                <h4 class="text-xl font-bold mb-3">Data as Flow</h4>
+                <p class="text-slate-500 text-sm">
+                    Treated as a continuous input to system behavior rather than
+                    a static asset.
+                </p>
+            </div>
+            <div class="mosaic-tile">
+                <h4 class="text-xl font-bold mb-3">Security as Boundary</h4>
+                <p class="text-slate-500 text-sm">
+                    Constraints that enable higher operating tempo by reducing
+                    systemic risk.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-16 bg-slate-950 border-t border-slate-900">
+    <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
+        <p>
+            Author of <strong class="text-slate-300">THE KINETIC ENTERPRISE</strong>,
+            a doctrinal account of organizational behavior under sustained speed
+            and complexity.
+        </p>
+    </div>
 </footer>
+
+<script>
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
 </body>
 </html>
