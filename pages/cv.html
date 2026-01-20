@@ -5,53 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career | Christos Kotsidimos</title>
     <meta name="description" content="Professional trajectory and career of Christos Kotsidimos, Group CTO and Strategic Advisor.">
-    
+    <meta name="description" content="Technology leadership, systems architecture, and authorship." />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-        
         body {
             font-family: 'Inter', sans-serif;
             background-color: #0f172a;
             color: #f8fafc;
+            scroll-behavior: smooth;
         }
 
-        .kinetic-border {
-            border-left: 2px solid #3b82f6;
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         }
 
-        .glass-panel {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(12px);
+        .mosaic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .mosaic-tile {
+            background: rgba(30, 41, 59, 0.5);
             border: 1px solid rgba(51, 65, 85, 0.5);
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
         }
 
-        .json-viewer {
-            background: #020617;
-            font-family: 'Courier New', Courier, monospace;
+        .mosaic-tile:hover {
+            border-color: #3b82f6;
+            transform: translateY(-5px);
+            background: rgba(30, 41, 59, 0.8);
         }
 
-        .status-pill {
-            background: rgba(59, 130, 246, 0.1);
-            color: #60a5fa;
-            border: 1px solid rgba(59, 130, 246, 0.3);
-        }
-
-        .nav-link:hover {
-            color: #3b82f6;
-            transform: translateX(4px);
-        }
-
-        .timeline-dot {
+        .mosaic-tile::before {
+            content: '';
             position: absolute;
-            left: -9px;
-            top: 8px;
-            width: 16px;
-            height: 16px;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
             background: #3b82f6;
-            border: 4px solid #0f172a;
-            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .mosaic-tile:hover::before {
+            opacity: 1;
+        }
+
+        .hero-text {
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .factory-contrast {
+            border-left: 2px solid #ef4444;
+        }
+        .kinetic-contrast {
+            border-left: 2px solid #3b82f6;
         }
     </style>
     <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
@@ -61,16 +96,16 @@
     <link rel="manifest" href="/assets/site.webmanifest" />
 </head>
 
-<body class="min-h-screen">
+<body>
 <nav class="glass-nav fixed w-full z-50 py-4">
     <div class="container mx-auto px-6 flex justify-between items-center">
         <div class="text-xl font-800 tracking-tighter uppercase">
+            <a href="/index.html" class="text-xl font-800 tracking-tighter uppercase">
             Christos Kotsidimos<span class="text-blue-500"></span>
+        </a>
         </div>
-
         <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-400">
             <a href="/index.html" class="hover:text-slate-200">Home</a>
-            <a href="/pages/about.html" class="hover:text-white transition">About</a>
             <a href="/pages/work.html" class="hover:text-white transition">Work</a>
             <a href="/pages/cv.html" class="hover:text-white transition">CV</a>
             <a href="/pages/contact.html" class="hover:text-white transition">Contact</a>
@@ -82,9 +117,7 @@
         </a>
     </div>
 </nav>
-
-
-    <main class="container mx-auto px-6 pt-32 pb-20">
+<main class="container mx-auto px-6 pt-32 pb-20">
         <!-- Render View -->
         <div id="humanView" class="max-w-4xl mx-auto">
             <header class="mb-16">
@@ -124,8 +157,7 @@
             </div>
             <pre class="json-viewer p-8 rounded-lg border border-slate-800 text-blue-300 overflow-x-auto text-sm leading-relaxed"></pre>
         </div>
-    </main>
-
+</main>
     <script>
         const cvData = {
           "basics": {
