@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #0f172a;
@@ -85,6 +87,7 @@
         .factory-contrast {
             border-left: 2px solid #ef4444;
         }
+
         .kinetic-contrast {
             border-left: 2px solid #3b82f6;
         }
@@ -97,54 +100,68 @@
 </head>
 
 <body>
-<nav class="glass-nav fixed w-full z-50 py-4">
-    <div class="container mx-auto px-6 flex justify-between items-center">
-        <div class="text-xl font-800 tracking-tighter uppercase">
-            <a href="/index.html" class="text-xl font-800 tracking-tighter uppercase">
-            Christos Kotsidimos<span class="text-blue-500"></span>
-        </a>
+    <nav class="glass-nav fixed w-full z-50 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-xl font-800 tracking-tighter uppercase">
+                <a href="/index.html" class="text-xl font-800 tracking-tighter uppercase">
+                    Christos Kotsidimos<span class="text-blue-500"></span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-400">
+                <a href="/index.html" class="hover:text-slate-200">Home</a>
+                <a href="/pages/work.html" class="hover:text-white transition">Work</a>
+                <a href="/pages/cv.html" class="hover:text-white transition">CV</a>
+                <a href="/pages/contact.html" class="hover:text-white transition">Contact</a>
+            </div>
+
+            <a href="https://github.com/ckotsidimos/kinetic-enterprise" target="_blank"
+                class="text-xl hover:text-blue-500 transition">
+                <i class="fab fa-github"></i>
+            </a>
         </div>
-        <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-400">
-            <a href="/index.html" class="hover:text-slate-200">Home</a>
-            <a href="/pages/work.html" class="hover:text-white transition">Work</a>
-            <a href="/pages/cv.html" class="hover:text-white transition">CV</a>
-            <a href="/pages/contact.html" class="hover:text-white transition">Contact</a>
-        </div>
+    </nav>
+    <header class="min-h-screen flex items-center pt-20 kinetic-gradient">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <h2 class="text-slate-400 font-semibold tracking-widest uppercase text-sm mb-4">
+                    Technology leadership & systems architecture
+                </h2>
 
-        <a href="https://github.com/ckotsidimos/kinetic-enterprise" target="_blank"
-           class="text-xl hover:text-blue-500 transition">
-            <i class="fab fa-github"></i>
-        </a>
-    </div>
-</nav>
-<header class="min-h-screen flex items-center pt-20 kinetic-gradient">
-    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div class="reveal">
-            <h2 class="text-slate-400 font-semibold tracking-widest uppercase text-sm mb-4">
-                Technology leadership & systems architecture
-            </h2>
+                <h1 class="text-5xl md:text-7xl font-800 hero-text mb-6">
+                    Christos Kotsidimos
+                </h1>
+                <p class="text-xl text-slate-400 mb-8 max-w-lg leading-relaxed">
+                    I help enterprise leaders redesign how their organisations make decisions,
+                    coordinate at scale, and operate under sustained uncertainty across regulated,
+                    high-complexity environments.
+                </p>
 
-            <h1 class="text-5xl md:text-7xl font-800 hero-text mb-6">
-                Christos Kotsidimos
-            </h1>
+                <p class="text-slate-400 max-w-lg leading-relaxed">
+                    My work focuses on decision latency, structural coherence, and governance
+                    encoded into operating models rather than layered as management process.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0">
+                    <a href="/pages/work.html"
+                    class="text-blue-500 hover:text-blue-400 font-semibold transition">
+                        Explore Work →
+                    </a>
 
-            <p class="text-xl text-slate-400 mb-8 max-w-lg leading-relaxed">
-                I work on large, distributed socio-technical systems where scale,
-                regulation, and sustained change place structural limits on how
-                organizations decide and execute.
-            </p>
+                    <a href="https://kineticorganization.com"
+                    target="_blank"
+                    class="text-slate-500 hover:text-white font-semibold transition">
+                        Read The Kinetic Enterprise →
+                    </a>
 
-            <p class="text-slate-400 max-w-lg leading-relaxed">
-                My focus is on decision latency, coordination, and governance as
-                executable structure rather than managerial process.
-            </p>
-        </div>
+                </div>
+            </div>
 
-        <div class="hidden md:block reveal" style="transition-delay: 0.2s;">
-            <div class="relative">
-                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg blur opacity-25"></div>
-                <div class="relative bg-slate-900 p-8 border border-slate-800 rounded-lg">
-                    <code class="text-blue-400 text-sm">
+            <div class="hidden md:block reveal" style="transition-delay: 0.2s;">
+                <div class="relative">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg blur opacity-25">
+                    </div>
+                    <div class="relative bg-slate-900 p-8 border border-slate-800 rounded-lg">
+                        <code class="text-blue-400 text-sm">
                         <span class="text-slate-500">// System behavior</span><br>
                         const enterprise = {<br>
                         &nbsp;&nbsp;structure: <span class="text-amber-400">'distributed'</span>,<br>
@@ -152,54 +169,72 @@
                         &nbsp;&nbsp;governance: <span class="text-amber-400">'executable'</span><br>
                         };
                     </code>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<section id="orientation" class="py-24 bg-slate-950">
-    <div class="container mx-auto px-6">
-        <div class="max-w-3xl mb-16 reveal">
-            <h3 class="text-3xl font-bold mb-6">Systems Orientation</h3>
-            <p class="text-slate-400 text-lg leading-relaxed">
+    <section id="orientation" class="py-24 bg-slate-950">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mb-16 reveal">
+                <h3 class="text-3xl font-bold mb-6">Systems Orientation</h3>
+                <p class="text-slate-400 text-lg leading-relaxed">
+                    Modern enterprises behave as complex systems. Outcomes emerge from structure,
+                    interfaces, and feedback loops rather than individual intent. When
+                    organizational scale outpaces decision velocity, execution degrades,
+                    regardless of technical investment.
+                </p>
+
+                <!-- <p class="text-slate-400 text-lg leading-relaxed">
                 Modern enterprises behave as complex systems. Outcomes emerge from
                 structure, interfaces, and feedback loops rather than individual
                 intent. When organizational mass exceeds decision velocity,
                 execution degrades regardless of technical capability.
+            </p> -->
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 reveal">
+                <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
+                    <h4 class="text-xl font-bold mb-4">Decision Latency</h4>
+                    <p class="text-slate-500 text-sm">
+                        The elapsed time between intent and coordinated action across
+                        a distributed organization.
+                    </p>
+                </div>
+                <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
+                    <h4 class="text-xl font-bold mb-4">Structural Coherence</h4>
+                    <p class="text-slate-500 text-sm">
+                        The ability of the system to absorb change without
+                        fragmentation or instability.
+                    </p>
+                </div>
+                <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
+                    <h4 class="text-xl font-bold mb-4">Governance as Constraint</h4>
+                    <p class="text-slate-500 text-sm">
+                        Governance encoded as executable boundaries rather than
+                        approval chains.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="industrial" class="py-24 bg-slate-900 border-y border-slate-800">
+        <div class="container mx-auto px-6 reveal">
+            <h2 class="text-3xl font-bold mb-6">The Industrial Limit</h2>
+            <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                Industrial era operating models were designed for stability and predictability.
+                They optimise throughput but centralise control.
             </p>
-        </div>
 
-        <div class="grid md:grid-cols-3 gap-8 reveal">
-            <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
-                <h4 class="text-xl font-bold mb-4">Decision Latency</h4>
-                <p class="text-slate-500 text-sm">
-                    The elapsed time between intent and coordinated action across
-                    a distributed organization.
-                </p>
-            </div>
-            <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
-                <h4 class="text-xl font-bold mb-4">Structural Coherence</h4>
-                <p class="text-slate-500 text-sm">
-                    The ability of the system to absorb change without
-                    fragmentation or instability.
-                </p>
-            </div>
-            <div class="p-8 border-l-2 border-blue-500 bg-slate-900/50">
-                <h4 class="text-xl font-bold mb-4">Governance as Constraint</h4>
-                <p class="text-slate-500 text-sm">
-                    Governance encoded as executable boundaries rather than
-                    approval chains.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+            <p class="text-slate-400 text-lg leading-relaxed">
+                When applied in environments defined by volatility and continuous change,
+                they increase activity while preserving structural bottlenecks.
+                Technology accelerates execution. It does not remove decision friction.
+            </p>
 
-<section id="industrial" class="py-24 bg-slate-900 border-y border-slate-800">
-    <div class="container mx-auto px-6 reveal">
-        <h2 class="text-3xl font-bold mb-6">The Industrial Limit</h2>
-        <p class="text-slate-400 text-lg leading-relaxed mb-6">
+            <!-- <p class="text-slate-400 text-lg leading-relaxed mb-6">
             Industrial operating models remain effective within environments
             defined by predictability. When applied beyond that domain, they
             increase throughput while preserving structural friction.
@@ -207,105 +242,120 @@
         <p class="text-slate-400 text-lg leading-relaxed">
             Modern technology accelerates execution, but does not resolve
             decision bottlenecks created by outdated control assumptions.
-        </p>
-    </div>
-</section>
-
-<section id="model" class="py-24 kinetic-gradient">
-    <div class="container mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
-            <h2 class="text-4xl font-bold mb-6">Structural Model</h2>
-            <p class="text-slate-400">
-                I treat the enterprise as a recomposable system of interoperating
-                capabilities rather than a collection of isolated functions.
-            </p>
+        </p> -->
         </div>
+    </section>
 
-        <div class="mosaic-grid reveal">
-            <div class="mosaic-tile">
-                <h4 class="text-xl font-bold mb-3">AI as Capability</h4>
-                <p class="text-slate-500 text-sm">
-                    Embedded into existing decision and execution paths rather
-                    than separated into standalone initiatives.
-                </p>
-            </div>
-            <div class="mosaic-tile">
-                <h4 class="text-xl font-bold mb-3">Data as Flow</h4>
-                <p class="text-slate-500 text-sm">
-                    Treated as a continuous input to system behavior rather than
-                    a static asset.
-                </p>
-            </div>
-            <div class="mosaic-tile">
-                <h4 class="text-xl font-bold mb-3">Security as Boundary</h4>
-                <p class="text-slate-500 text-sm">
-                    Constraints that enable higher operating tempo by reducing
-                    systemic risk.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="about" class="py-24 bg-gradient-to-br from-slate-900 to-bg border-t border-slate-800">
-    <div class="container mx-auto px-6">
-
-        <div class="max-w-3xl mb-16 reveal">
-            <h2 class="text-3xl font-bold mb-6">Background & Orientation</h2>
-
-            <p class="text-slate-400 text-lg leading-relaxed mb-6">
-                I work on large-scale, distributed systems where technology,
-                organization, and governance intersect under conditions of
-                uncertainty.
-            </p>
-
-            <p class="text-slate-400 text-lg leading-relaxed">
-                My background spans infrastructure, platforms, data, and
-                operating models, with a recurring focus on environments where
-                coordination and decision latency become the dominant constraints.
-            </p>
-        </div>
-
-        <div class="max-w-3xl reveal">
-            <h3 class="text-xs uppercase tracking-widest text-slate-400 mb-4">
-                Intellectual Orientation
-            </h3>
-
-            <div class="bg-slate-900/50 border-l-2 border-blue-500 p-6">
+    <section id="model" class="py-24 kinetic-gradient">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <h2 class="text-4xl font-bold mb-6">Structural Model</h2>
                 <p class="text-slate-400">
-                    My work is informed by systems theory, distributed systems,
-                    military doctrine, and organizational history. I am
-                    particularly interested in how large systems remain coherent
-                    under pressure, and how structure, rather than intent,
-                    shapes outcomes.
+                    I treat the enterprise as a recomposable system of interoperating
+                    capabilities rather than a collection of isolated functions.
                 </p>
             </div>
+
+            <div class="mosaic-grid reveal">
+                <div class="mosaic-tile">
+                    <h4 class="text-xl font-bold mb-3">AI as Capability</h4>
+                    <p class="text-slate-500 text-sm">
+                        Embedded into existing decision and execution paths rather
+                        than separated into standalone initiatives.
+                    </p>
+                </div>
+                <div class="mosaic-tile">
+                    <h4 class="text-xl font-bold mb-3">Data as Flow</h4>
+                    <p class="text-slate-500 text-sm">
+                        Treated as a continuous input to system behavior rather than
+                        a static asset.
+                    </p>
+                </div>
+                <div class="mosaic-tile">
+                    <h4 class="text-xl font-bold mb-3">Security as Boundary</h4>
+                    <p class="text-slate-500 text-sm">
+                        Constraints that enable higher operating tempo by reducing
+                        systemic risk.
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
+    <section id="about" class="py-24 bg-gradient-to-br from-slate-900 to-bg border-t border-slate-800">
+        <div class="container mx-auto px-6">
 
-    </div>
-</section>
+            <div class="max-w-3xl mb-16 reveal">
+                <h2 class="text-3xl font-bold mb-6">Background & Orientation</h2>
+
+                <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                    I work on large-scale, distributed systems where technology,
+                    organization, and governance intersect under conditions of
+                    uncertainty.
+                </p>
+
+                <p class="text-slate-400 text-lg leading-relaxed">
+                    My background spans infrastructure, platforms, data, and
+                    operating models, with a recurring focus on environments where
+                    coordination and decision latency become the dominant constraints.
+                </p>
+            </div>
+
+            <div class="max-w-3xl reveal">
+                <h3 class="text-xs uppercase tracking-widest text-slate-400 mb-4">
+                    Intellectual Orientation
+                </h3>
+
+                <div class="bg-slate-900/50 border-l-2 border-blue-500 p-6">
+                    <p class="text-slate-400">
+                        My work is informed by systems theory, distributed systems,
+                        military doctrine, and organizational history. I am
+                        particularly interested in how large systems remain coherent
+                        under pressure, and how structure, rather than intent,
+                        shapes outcomes.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="py-24 bg-slate-950 border-t border-slate-800">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <h2 class="text-3xl font-bold mb-6">The Kinetic Enterprise</h2>
+            <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                A CTO doctrine for the cognitive economy.
+                An examination of how organisations convert insight into coordinated action
+                without destabilising structure.
+            </p>
+            <a href="https://kineticorganization.com" class="text-blue-500 hover:text-blue-400 font-semibold">
+                Explore the doctrine →
+            </a>
+        </div>
+    </section>
 
 
-<footer class="py-16 bg-slate-950 border-t border-slate-900">
-    <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
-        <p>
-            Author of <strong class="text-slate-300">THE KINETIC ENTERPRISE</strong>,
-            a doctrinal account of organizational behavior under sustained speed
-            and complexity.
-        </p>
-    </div>
-</footer>
 
-<script>
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
+    <footer class="py-16 bg-slate-950 border-t border-slate-900">
+        <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
+            <p>
+                Author of <strong class="text-slate-300">THE KINETIC ENTERPRISE</strong>,
+                a doctrinal account of organizational behavior under sustained speed
+                and complexity.
+            </p>
+        </div>
+    </footer>
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 
 </body>
+
 </html>
