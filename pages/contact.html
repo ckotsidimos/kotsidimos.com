@@ -117,30 +117,86 @@
     </div>
 </nav>
 
-<main class="container mx-auto px-6 pt-32 pb-20">
-<section class="py-24 bg-gradient-to-br from-slate-900 to-bg">
-  <div class="max-w-reading mx-auto px-5">
-    <h1 class="text-3xl font-light mb-10">Contact</h1>
+<!-- Hero -->
+<header class="min-h-[50vh] flex items-center pt-20 kinetic-gradient">
+    <div class="container mx-auto px-6">
+        <div class="max-w-3xl reveal">
+            <h1 class="text-5xl md:text-7xl font-800 hero-text mb-6">
+                Contact
+            </h1>
 
-    <p class="text-muted mb-6">
-      For correspondence and professional contact.
-    </p>
-
-    <div class="bg-slate-900/50 border-l-2 border-blue-500 p-6">
-      <a href="mailto:ckotsidimos@gmail.com" class="text-accent hover:underline">
-        ckotsidimos@gmail.com
-      </a>
+            <p class="text-xl text-slate-400 leading-relaxed max-w-2xl">
+                Executive advisory, operating model discussions,
+                and structured collaboration inquiries.
+            </p>
+        </div>
     </div>
-  </div>
+</header>
+
+<!-- Main Contact Section -->
+<section class="py-24 bg-slate-950">
+    <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto reveal">
+
+            <h2 class="text-3xl font-bold mb-8 tracking-tight">
+                Direct Contact
+            </h2>
+
+            <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                I engage in executive-level discussions around
+                enterprise operating models, platform strategy, governance design,
+                and structural transformation.
+            </p>
+
+            <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                If your inquiry relates to advisory collaboration,
+                research alignment, or structured technical leadership roles,
+                feel free to reach out directly.
+            </p>
+
+            <div class="bg-slate-900/50 border-l-2 border-blue-500 p-6 mb-10">
+                <p class="text-slate-400 mb-2">
+                    Email
+                </p>
+                <a href="mailto:ckotsidimos@gmail.com"
+                   class="text-blue-500 hover:text-blue-400 font-semibold">
+                    → ckotsidimos@gmail.com
+                </a>
+            </div>
+
+            <div>
+                <p class="text-slate-400 mb-2">
+                    LinkedIn
+                </p>
+                <a href="https://www.linkedin.com/in/ckotsidimos"
+                   target="_blank"
+                   class="text-blue-500 hover:text-blue-400 font-semibold">
+                    → Christos Kotsidimos
+                </a>
+            </div>
+
+        </div>
+    </div>
 </section>
 
-</main>
-
-<footer class="border-t border-rule">
-  <div class="max-w-reading mx-auto px-5 py-8 text-sm text-muted">
-    © Christos Kotsidimos
-  </div>
+<!-- Footer -->
+<footer class="py-16 bg-slate-950 border-t border-slate-900">
+    <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
+        © Christos Kotsidimos
+    </div>
 </footer>
 
+<!-- Reveal Animation -->
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>

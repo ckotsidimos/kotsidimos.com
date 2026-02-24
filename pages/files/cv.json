@@ -1,0 +1,135 @@
+{
+  "basics": {
+    "name": "Christos Kotsidimos",
+    "label": "Global Head of Cloud Platform Engineering | Enterprise Transformation",
+    "email": "ckotsidimos@gmail.com",
+    "phone": "************",
+    "location": {
+      "city": "London",
+      "countryCode": "UK"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "ckotsidimos",
+        "url": "https://www.linkedin.com/in/ckotsidimos"
+      }
+    ],
+    "summary": "Senior cloud and platform engineering leader with 25+ years of experience designing and operating revenue-critical technology platforms and leading Tier-1 enterprise transformation programmes. Trusted by CIOs and CTOs to take architectural decisions carrying material commercial and regulatory risk and to stand behind those decisions in production."
+  },
+
+  "strategicVectors": [
+    {
+      "category": "Boardroom Strategy",
+      "items": [
+        "M&A Integration",
+        "Private Equity Value Creation",
+        "EBITDA Growth Through Platform Optimisation",
+        "Executive Investment Prioritisation",
+        "Enterprise Risk Alignment"
+      ]
+    },
+    {
+      "category": "Engineering Execution",
+      "items": [
+        "Platform Engineering at Scale",
+        "Cloud-Native Architecture",
+        "Secure-by-Default Governance",
+        "AI/ML Platform Roadmaps",
+        "Developer Experience Optimisation"
+      ]
+    },
+    {
+      "category": "The Kinetic Doctrine",
+      "items": [
+        "Organizational Physics",
+        "Decision Latency Reduction",
+        "Mosaic Design & Modular Architecture",
+        "Operating Model Constraints Under Uncertainty"
+      ]
+    }
+  ],
+
+  "work": [
+    {
+      "name": "Pythian",
+      "position": "Strategic Solutions & Enterprise Architecture (EMEA)",
+      "startDate": "2025-09",
+      "endDate": "Present",
+      "summary": "Strategic advisor to CIOs and CTOs across EMEA diagnosing enterprise-scale architectural, operational, and delivery constraints.",
+      "highlights": [
+        "Led executive discovery engagements aligning business objectives, risk posture, and multi-year technology strategy.",
+        "Operated as extension of CIO and CTO leadership teams influencing investment sequencing and enterprise risk decisions.",
+        "Advised on governance models and scalable golden path architectures to move organisations beyond PoC-driven delivery."
+      ]
+    },
+    {
+      "name": "Eviden (formerly Cloudreach)",
+      "position": "Head of Strategy / Chief Technology Officer",
+      "startDate": "2022",
+      "endDate": "2025",
+      "summary": "Executive technology leadership accountable for strategy, architecture, and delivery governance across Tier-1 transformation programmes.",
+      "highlights": [
+        "Owned architectural integrity and delivery governance across concurrent global programmes.",
+        "Led executive-level solution positioning for multi-million transformation initiatives balancing risk, compliance, and sustainability.",
+        "Strengthened IT governance alignment across regulated environments."
+      ]
+    },
+    {
+      "name": "Cloudreach",
+      "position": "Chief Architect",
+      "startDate": "2018",
+      "endDate": "2022",
+      "summary": "Built and led global architecture practice delivering large-scale cloud transformations for enterprise clients.",
+      "highlights": [
+        "Architected reference implementations for container platforms and cloud-native architectures.",
+        "Defined governance models balancing engineering autonomy with security, cost, and compliance.",
+        "Scaled global architecture function to 20+ professionals."
+      ]
+    },
+    {
+      "name": "InternetQ PLC",
+      "position": "Head of IT Platforms & Infrastructure",
+      "startDate": "2011",
+      "endDate": "2018",
+      "summary": "Executive leadership of IT operations across three global data centres.",
+      "highlights": [
+        "Migrated 1.5K servers to Azure modernising 50 mission-critical applications generating 40% of company revenue.",
+        "Reduced infrastructure cost by 30% while improving scalability and operational control."
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "City University of Seattle",
+      "area": "Computer Systems",
+      "studyType": "Master of Science"
+    },
+    {
+      "institution": "University of Northumbria",
+      "area": "Business Systems and IT",
+      "studyType": "Bachelor of Science"
+    }
+  ],
+
+  "certificates": [
+    {
+      "name": "Microsoft Certified: Azure Solutions Architect Expert"
+    },
+    {
+      "name": "MCSE: Cloud Platform and Infrastructure"
+    },
+    {
+      "name": "MCSA: Cloud Platform"
+    }
+  ],
+
+  "publications": [
+    {
+      "name": "The Kinetic Enterprise – A CTO Doctrine for the Cognitive Economy",
+      "publisher": "Independent Publication",
+      "summary": "Doctrinal framework exploring operating model design, decision velocity, and execution under sustained uncertainty."
+    }
+  ]
+}

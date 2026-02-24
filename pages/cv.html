@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>CV | Christos Kotsidimos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career | Christos Kotsidimos</title>
-    <meta name="description" content="Professional trajectory and career of Christos Kotsidimos, Group CTO and Strategic Advisor.">
-    <meta name="description" content="Technology leadership, systems architecture, and authorship." />
+    <meta name="description" content="Executive technology leadership, enterprise transformation, and operating model design under uncertainty.">
 
-        <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E83FDPZX1T"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -15,9 +14,9 @@
       gtag('js', new Date());
       gtag('config', 'G-E83FDPZX1T');
     </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
         body {
@@ -97,26 +96,21 @@
             border-left: 2px solid #3b82f6;
         }
     </style>
-    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
-    <link rel="manifest" href="/assets/site.webmanifest" />
 </head>
 
 <body>
+<!-- NAV -->
 <nav class="glass-nav fixed w-full z-50 py-4">
     <div class="container mx-auto px-6 flex justify-between items-center">
-        <div class="text-xl font-800 tracking-tighter uppercase">
-            <a href="/index.html" class="text-xl font-800 tracking-tighter uppercase">
-            Christos Kotsidimos<span class="text-blue-500"></span>
+        <a href="/index.html" class="text-xl font-800 tracking-tighter uppercase">
+            Christos Kotsidimos
         </a>
-        </div>
+
         <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-400">
             <a href="/index.html" class="hover:text-slate-200">Home</a>
-            <a href="/pages/work.html" class="hover:text-white transition">Work</a>
-            <a href="/pages/cv.html" class="hover:text-white transition">CV</a>
-            <a href="/pages/contact.html" class="hover:text-white transition">Contact</a>
+            <a href="/pages/work.html" class="hover:text-white">Work</a>
+            <a href="/pages/cv.html" class="hover:text-white">CV</a>
+            <a href="/pages/contact.html" class="hover:text-white">Contact</a>
         </div>
 
         <a href="https://github.com/ckotsidimos/kinetic-enterprise" target="_blank"
@@ -125,211 +119,148 @@
         </a>
     </div>
 </nav>
-<main class="container mx-auto px-6 pt-32 pb-20">
-        <!-- Render View -->
-        <div id="humanView" class="max-w-4xl mx-auto">
-            <header class="mb-16">
-                <h1 class="text-5xl font-800 mb-4 tracking-tight">
-                    My Career 
-                <span class="text-blue-500"></span></h1>
-                <p class="text-xl text-slate-400 leading-relaxed max-w-2xl" id="summary">
-                    
-                </p>
-                <div class="flex flex-wrap gap-3 mt-6" id="basics-contact"></div>
-            </header>
 
-            <section class="mb-20">
-                <h2 class="text-sm font-bold uppercase tracking-widest text-blue-500 mb-10">Engineering Execution & Experience</h2>
-                <div class="relative border-l border-slate-800 ml-4 space-y-12" id="workExperience">
-                    <!-- Work injected here -->
-                </div>
-            </section>
+<!-- HERO -->
+<header class="min-h-[50vh] flex items-center pt-20 kinetic-gradient border-b border-slate-900">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-800 hero-text mb-6">
+                Curriculum Vitae
+            </h1>
 
-            <section class="grid md:grid-cols-2 gap-12 mb-20">
-                <div>
-                    <h2 class="text-sm font-bold uppercase tracking-widest text-blue-500 mb-6">Strategic Vectors (Skills)</h2>
-                    <div class="space-y-6" id="skillsGrid"></div>
-                </div>
-                <div>
-                    <h2 class="text-sm font-bold uppercase tracking-widest text-blue-500 mb-6">Foundations & Credentials</h2>
-                    <div class="space-y-4" id="educationCerts"></div>
-                </div>
-            </section>
+            <p id="summary" class="text-xl text-slate-400 leading-relaxed max-w-3xl">
+            </p>
+
+            <div id="contact" class="flex flex-wrap gap-3 mt-6"></div>
         </div>
+    </div>
+</header>
 
-        <!-- JSON View (Hidden by default) -->
-        <div id="jsonView" class="hidden max-w-5xl mx-auto">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold italic text-slate-500">// raw_schema_data.json</h2>
-                <button onclick="copyJson()" class="text-xs font-bold uppercase tracking-widest hover:text-blue-400">Copy to Clipboard</button>
+<!-- MAIN -->
+<main class="py-24">
+    <div class="container mx-auto px-6 max-w-4xl space-y-24">
+
+        <!-- EXPERIENCE -->
+        <section>
+            <h2 class="text-sm font-bold uppercase tracking-widest text-blue-500 mb-10">
+                Professional Experience
+            </h2>
+            <div id="work" class="relative border-l border-slate-800 ml-4 space-y-12"></div>
+        </section>
+
+        <!-- STRATEGIC VECTORS -->
+        <section class="grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-blue-500 mb-8">
+                    Strategic Vectors
+                </h2>
+                <div id="vectors" class="space-y-8"></div>
             </div>
-            <pre class="json-viewer p-8 rounded-lg border border-slate-800 text-blue-300 overflow-x-auto text-sm leading-relaxed"></pre>
-        </div>
+
+            <div>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-blue-500 mb-8">
+                    Foundations & Credentials
+                </h2>
+                <div id="education" class="space-y-6 mb-10"></div>
+                <div id="certificates" class="space-y-3"></div>
+            </div>
+        </section>
+
+    </div>
 </main>
-    <script>
-        const cvData = {
-          "basics": {
-            "name": "Christos Kotsidimos",
-            "label": "Group CTO | The Kinetic Leader",
-            "email": "ckotsidimos@gmail.com",
-            "phone": "***********",
-            "url": "https://kotsidimos.com",
-            "summary": "Commercial-first technology executive bridging the gap between Boardroom Strategy and Engineering Execution. Architecting kinetic organizations for global enterprise scale where speed, regulation, and cost pressure intersect. Expert in M&A technology integration, SaaS transformation, and Private Equity value creation.",
-            "location": { "city": "London", "countryCode": "GB" }
-          },
-          "work": [
-            {
-              "name": "Eviden",
-              "position": "Head of CTO Strategy",
-              "startDate": "2021-01-01",
-              "summary": "Leading strategic roadmap definition and architectural governance for Tier-1 Financial Services and Global Enterprises.",
-              "highlights": [
-                "Architected the Secure Container Strategy for UBS, establishing core governance for multi-cloud adoption.",
-                "Realized £5M in annual operational savings for Unilever through infrastructure optimization.",
-                "Deployed 'The Kinetic Methodology' to reduce technical debt and increase pivot velocity."
-              ]
-            },
-            {
-              "name": "Cloudreach (Acquired by Eviden)",
-              "position": "Chief Architect",
-              "startDate": "2018-01-01",
-              "endDate": "2021-12-31",
-              "summary": "Directed a global team of 90+ Architects during rapid growth and successful acquisition phases.",
-              "highlights": [
-                "Standardized core portfolios for acquisition readiness.",
-                "Designed Azure Landing Zone for IKEA, cutting global infrastructure costs by 30%.",
-                "Pioneered FinOps principles to ensure 100% ROI on cloud investments."
-              ]
-            },
-            {
-              "name": "InternetQ PLC",
-              "position": "IT Manager",
-              "startDate": "2011-01-01",
-              "endDate": "2018-12-31",
-              "highlights": [
-                "Migrated 1.5K servers to Azure, securing 40% of company revenue through modern architecture.",
-                "Achieved 30% reduction in OpEx through global data center consolidation."
-              ]
-            }
-          ],
-          "skills": [
-            { "name": "Boardroom Strategy", "keywords": ["M&A Integration", "PE Value Creation", "EBITDA Growth"] },
-            { "name": "Engineering Execution", "keywords": ["Platform Engineering", "Cloud-Native", "AI/ML Roadmap"] },
-            { "name": "The Kinetic Doctrine", "keywords": ["Organizational Physics", "Decision Latency Reduction", "Mosaic Design"] }
-          ],
-          "education": [
-            { "institution": "City University of Seattle", "area": "Computer Systems", "studyType": "Master of Science" },
-            { "institution": "University of Northumbria", "area": "Business Systems and IT", "studyType": "Bachelor of Science" }
-          ],
-          "certificates": [
-            { "name": "Azure Solutions Architect Expert" },
-            { "name": "MCSE: Cloud Platform and Infrastructure" },
-            { "name": "MCSA: Cloud Platform" }
-          ]
-        };
 
-        function renderResume() {
-            // Summary
-            document.getElementById('summary').innerText = cvData.basics.summary;
+<footer class="py-16 border-t border-slate-900 text-center text-slate-500 text-sm">
+    © Christos Kotsidimos
+</footer>
 
-            // Contact
-            const contact = document.getElementById('basics-contact');
-            contact.innerHTML = `
-                <span class="status-pill px-3 py-1 text-xs font-bold rounded-full">${cvData.basics.location.city}, UK</span>
-                <span class="status-pill px-3 py-1 text-xs font-bold rounded-full">${cvData.basics.email}</span>
-                <span class="status-pill px-3 py-1 text-xs font-bold rounded-full">${cvData.basics.phone}</span>
+<!-- SCRIPT -->
+<script>
+fetch('/files/cv.json')
+    .then(res => res.json())
+    .then(data => {
+
+        // Summary
+        document.getElementById('summary').innerText = data.basics.summary;
+
+        // Contact
+        const contact = document.getElementById('contact');
+        contact.innerHTML = `
+            <span class="status-pill px-3 py-1 text-xs font-bold rounded-full">${data.basics.location.city}, UK</span>
+            <span class="status-pill px-3 py-1 text-xs font-bold rounded-full">${data.basics.email}</span>
+        `;
+
+        // Experience
+        const workContainer = document.getElementById('work');
+        data.work.forEach(job => {
+            const div = document.createElement('div');
+            div.className = "relative pl-8";
+
+            div.innerHTML = `
+                <div class="timeline-dot"></div>
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                    <div>
+                        <h3 class="text-xl font-bold">${job.position}</h3>
+                        <p class="text-blue-400 font-semibold">${job.name}</p>
+                    </div>
+                    <span class="text-sm text-slate-500 font-mono">
+                        ${job.startDate?.split('-')[0]} — ${job.endDate ? job.endDate.split('-')[0] : 'Present'}
+                    </span>
+                </div>
+                <p class="text-slate-400 mb-4 text-sm">${job.summary || ''}</p>
+                <ul class="space-y-2">
+                    ${job.highlights.map(h => `<li class="text-slate-500 text-sm flex items-start"><span class="text-blue-500 mr-2">▹</span>${h}</li>`).join('')}
+                </ul>
             `;
+            workContainer.appendChild(div);
+        });
 
-            // Experience
-            const workContainer = document.getElementById('workExperience');
-            cvData.work.forEach(job => {
-                const jobDiv = document.createElement('div');
-                jobDiv.className = 'relative pl-8';
-                jobDiv.innerHTML = `
-                    <div class="timeline-dot"></div>
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">${job.position}</h3>
-                            <p class="text-blue-400 font-semibold">${job.name}</p>
-                        </div>
-                        <span class="text-sm text-slate-500 font-mono mt-1 md:mt-0">${job.startDate.split('-')[0]} — ${job.endDate ? job.endDate.split('-')[0] : 'Present'}</span>
-                    </div>
-                    <p class="text-slate-400 mb-4 text-sm">${job.summary || ''}</p>
-                    <ul class="space-y-2">
-                        ${job.highlights.map(h => `<li class="text-slate-500 text-sm flex items-start"><span class="text-blue-500 mr-2">▹</span>${h}</li>`).join('')}
-                    </ul>
-                `;
-                workContainer.appendChild(jobDiv);
+        // Strategic Vectors
+        const vectorsContainer = document.getElementById('vectors');
+        data.strategicVectors.forEach(vector => {
+            const div = document.createElement('div');
+            div.innerHTML = `
+                <h4 class="font-bold text-white mb-3">${vector.category}</h4>
+                <div class="flex flex-wrap gap-2">
+                    ${vector.items.map(i => `<span class="text-[10px] uppercase tracking-wider font-800 text-slate-400 border border-slate-800 px-2 py-1">${i}</span>`).join('')}
+                </div>
+            `;
+            vectorsContainer.appendChild(div);
+        });
+
+        // Education
+        const eduContainer = document.getElementById('education');
+        data.education.forEach(edu => {
+            const div = document.createElement('div');
+            div.innerHTML = `
+                <p class="text-xs font-bold text-blue-500 uppercase tracking-wider">${edu.studyType}</p>
+                <h4 class="font-bold">${edu.area}</h4>
+                <p class="text-slate-500 text-sm">${edu.institution}</p>
+            `;
+            eduContainer.appendChild(div);
+        });
+
+        // Certificates
+        const certContainer = document.getElementById('certificates');
+        data.certificates.forEach(cert => {
+            const div = document.createElement('div');
+            div.className = "flex items-center space-x-3 text-slate-400 text-sm";
+            div.innerHTML = `<i class="fas fa-certificate text-blue-500 text-xs"></i><span>${cert.name}</span>`;
+            certContainer.appendChild(div);
+        });
+
+    });
+</script>
+<!-- Reveal Animation -->
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
             });
+        }, { threshold: 0.1 });
 
-            // Skills
-            const skillsContainer = document.getElementById('skillsGrid');
-            cvData.skills.forEach(skill => {
-                const skillDiv = document.createElement('div');
-                skillDiv.className = 'glass-panel p-6 rounded-lg';
-                skillDiv.innerHTML = `
-                    <h4 class="font-bold text-white mb-3">${skill.name}</h4>
-                    <div class="flex flex-wrap gap-2">
-                        ${skill.keywords.map(k => `<span class="text-[10px] uppercase tracking-wider font-800 text-slate-400 border border-slate-800 px-2 py-1">${k}</span>`).join('')}
-                    </div>
-                `;
-                skillsContainer.appendChild(skillDiv);
-            });
-
-            // Education & Certs
-            const eduContainer = document.getElementById('educationCerts');
-            
-            // Render Education
-            cvData.education.forEach(edu => {
-                const eduDiv = document.createElement('div');
-                eduDiv.className = 'glass-panel p-4 rounded-lg border-l-2 border-slate-700 hover:border-blue-500 transition-colors';
-                eduDiv.innerHTML = `
-                    <p class="text-xs font-bold text-blue-500 uppercase tracking-wider mb-1">${edu.studyType}</p>
-                    <h4 class="font-bold text-white">${edu.area}</h4>
-                    <p class="text-slate-500 text-xs">${edu.institution}</p>
-                `;
-                eduContainer.appendChild(eduDiv);
-            });
-
-            // Render Certs header
-            if (cvData.certificates && cvData.certificates.length > 0) {
-                const certHeader = document.createElement('h3');
-                certHeader.className = 'text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 mt-8 mb-4';
-                certHeader.innerText = 'Technical Certifications';
-                eduContainer.appendChild(certHeader);
-
-                // Render Certs
-                cvData.certificates.forEach(cert => {
-                    const certDiv = document.createElement('div');
-                    certDiv.className = 'flex items-center space-x-3 text-slate-400 text-sm mb-3';
-                    certDiv.innerHTML = `<i class="fas fa-certificate text-blue-900 text-xs"></i> <span>${cert.name}</span>`;
-                    eduContainer.appendChild(certDiv);
-                });
-            }
-
-            // Raw JSON View
-            document.querySelector('.json-viewer').textContent = JSON.stringify(cvData, null, 2);
-        }
-
-        let isJsonView = false;
-        function toggleView() {
-            isJsonView = !isJsonView;
-            document.getElementById('humanView').classList.toggle('hidden');
-            document.getElementById('jsonView').classList.toggle('hidden');
-            document.getElementById('viewToggle').innerText = isJsonView ? 'Switch to Profile View' : 'Switch to JSON Schema';
-        }
-
-        function copyJson() {
-            const text = JSON.stringify(cvData, null, 2);
-            const el = document.createElement('textarea');
-            el.value = text;
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand('copy');
-            document.body.removeChild(el);
-        }
-
-        window.onload = renderResume;
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
