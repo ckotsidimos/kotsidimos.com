@@ -7,6 +7,14 @@
     <meta name="contact" content="Technology leadership, systems architecture, and authorship." />
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E83FDPZX1T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E83FDPZX1T');
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
@@ -96,8 +104,8 @@
 </head>
 
 <body class="min-h-screen">
-<nav class="glass-nav fixed w-full z-50 py-4">
-    <div class="container mx-auto px-6 flex justify-between items-center">
+<nav class="glass-nav fixed w-full z-50">
+    <div class="container mx-auto px-6 flex justify-between items-center py-4">
         <div class="text-xl font-800 tracking-tighter uppercase">
             <a href="/index.html" class="hover:text-slate-200">
             Christos Kotsidimos<span class="text-blue-500"></a></span>
@@ -110,10 +118,25 @@
             <a href="/pages/contact.html" class="hover:text-white transition">Contact</a>
         </div>
 
-        <a href="https://github.com/ckotsidimos/kinetic-enterprise" target="_blank"
+        <div class="flex items-center space-x-4">
+            <a href="https://github.com/ckotsidimos/kinetic-enterprise" target="_blank"
            class="text-xl hover:text-blue-500 transition">
             <i class="fab fa-github"></i>
         </a>
+            <button id="nav-toggle" class="md:hidden flex items-center text-slate-400 hover:text-white focus:outline-none" aria-label="Toggle navigation">
+                <svg id="nav-icon-open" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+                <svg id="nav-icon-close" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" class="hidden"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+            </button>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-nav" class="hidden px-6 pb-5 border-t border-slate-800/60">
+        <div class="flex flex-col space-y-3 pt-4 text-sm font-semibold text-slate-400">
+            <a href="/index.html" class="hover:text-slate-200 transition">Home</a>
+            <a href="/pages/work.html" class="hover:text-white transition">Work</a>
+            <a href="/pages/cv.html" class="hover:text-white transition">CV</a>
+            <a href="/pages/contact.html" class="hover:text-white transition">Contact</a>
+        </div>
     </div>
 </nav>
 
@@ -208,52 +231,7 @@
     </div>
 </section>
 
-<!-- 
-<section class="py-24 bg-slate-950">
-    <div class="container mx-auto px-6">
-        <div class="max-w-3xl mx-auto reveal">
 
-            <h2 class="text-3xl font-bold mb-8 tracking-tight">
-                Direct Contact
-            </h2>
-
-            <p class="text-slate-400 text-lg leading-relaxed mb-6">
-                I engage in executive-level discussions around
-                enterprise operating models, platform strategy, governance design,
-                and structural transformation.
-            </p>
-
-            <p class="text-slate-400 text-lg leading-relaxed mb-8">
-                If your inquiry relates to advisory collaboration,
-                research alignment, or structured technical leadership roles,
-                feel free to reach out directly.
-            </p>
-
-            <div class="bg-slate-900/50 border-l-2 border-blue-500 p-6 mb-10">
-                <p class="text-slate-400 mb-2">
-                    Email
-                </p>
-                <a href="mailto:ckotsidimos@gmail.com"
-                   class="text-blue-500 hover:text-blue-400 font-semibold">
-                    → ckotsidimos@gmail.com
-                </a>
-            </div>
-
-            <div>
-                <p class="text-slate-400 mb-2">
-                    LinkedIn
-                </p>
-                <a href="https://www.linkedin.com/in/ckotsidimos"
-                   target="_blank"
-                   class="text-blue-500 hover:text-blue-400 font-semibold">
-                    → Christos Kotsidimos
-                </a>
-            </div>
-
-        </div>
-    </div>
-</section>
-Main Contact Section -->
 
 <!-- Footer -->
 <footer class="py-16 bg-slate-950 border-t border-slate-900">
@@ -273,6 +251,19 @@ Main Contact Section -->
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        // Mobile nav toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileNav  = document.getElementById('mobile-nav');
+        const navIconOpen  = document.getElementById('nav-icon-open');
+        const navIconClose = document.getElementById('nav-icon-close');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                mobileNav.classList.toggle('hidden');
+                navIconOpen.classList.toggle('hidden');
+                navIconClose.classList.toggle('hidden');
+            });
+        }
+
     </script>
 </body>
 </html>
